@@ -1,0 +1,45 @@
+{
+  "name": "goit-js-hw-13-image-finder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode=production",
+    "start": "webpack server --mode development --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saftar94/goit-js-hw-13-image-finder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Saftar94/goit-js-hw-13-image-finder/issues"
+  },
+  "homepage": "https://github.com/Saftar94/goit-js-hw-13-image-finder#readme",
+  "devDependencies": {
+    "webpack": "^5.60.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.3.1"
+  },
+  "dependencies": {
+    "@babel/core": "^7.15.8",
+    "api-core": "^3.0.0",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.5.0",
+    "gh-pages": "^3.2.3",
+    "handlebars": "^4.7.7",
+    "handlebars-loader": "^1.7.1",
+    "html-loader": "^3.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "lodash": "^4.17.21",
+    "sass": "^1.43.3",
+    "sass-loader": "^12.2.0",
+    "style-loader": "^3.3.1",
+    "sweetalert": "^2.1.2",
+    "typescript": "^4.4.4",
+    "webpack-plugin-serve": "^1.5.0"
+  }
+}
