@@ -10,7 +10,7 @@ export default class NewsApiService {
     console.log(this)
     let url =
       BASE_URL +
-      `?image_type=photo&orientation=horizontal&q=${this.searchQuery}&page=${this.page}&per_page=12&key=${API_KEY}`
+      `?image_type=photo&orientation=horizontal&q=${this.searchQuery}&page=${this.page}&per_page=4&key=${API_KEY}`
 
     return fetch(`${url}`)
       .then((res) => res.json())
