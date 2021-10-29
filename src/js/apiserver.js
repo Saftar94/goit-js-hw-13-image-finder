@@ -3,7 +3,7 @@ const API_KEY = '24061129-288dc6abfa1f4d8fd1e3dc1ee'
 
 export default class NewsApiService {
   constructor() {
-    this.searchQuery = 'cat'
+    this.searchQuery = ''
     this.page = 1
   }
   fetchArticles() {

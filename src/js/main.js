@@ -20,14 +20,21 @@ refs.serchmoreButton.addEventListener('click', fetachMoreCard)
 function fetachcard(eve) {
   eve.preventDefault()
 
-  clearArticalse()
   newsApiService.query = eve.currentTarget.elements.query.value
+  if (newsApiService.query === '') {
+    return errorNotifi()
+  }
   newsApiService.resetPage()
-  newsApiService.fetchArticles().then(appendfotoTpl)
+  newsApiService.fetchArticles().then((hits) => {
+    clearArticalse(), appendfotoTpl(hits)
+  })
 }
 
 function fetachMoreCard() {
-  newsApiService.fetchArticles().then(appendfotoTpl)
+  newsApiService
+    .fetchArticles()
+    .then(appendfotoTpl)
+    .catch((error) => console.log(error))
 }
 
 function appendfotoTpl(articles) {
@@ -36,11 +43,11 @@ function appendfotoTpl(articles) {
 function clearArticalse() {
   refs.listcard.innerHTML = ''
 }
+
 function errorNotifi() {
   swal({
     title: 'Are you sure?',
-    text:
-      'Die Bestellung wird aufgegeben und es können keine weiteren Artikel hinzugefügt werden!',
+    text: 'Please enter text!',
     type: 'warning',
     showCancelButton: true,
     confirmButtonColor: '#DD6B55',
